@@ -94,9 +94,6 @@ func (g *Gun) shoot(ammo *Ammo) {
 	path, _ := os.Getwd()
 	path += "/default.yml"
 	request, err := newfileUploadRequest(ammo.URL, "file", ammo.Path)
-	if err != nil {
-		log.Fatal(err)
-	}
 	resp, err := g.client.Do(request)
 	if err != nil {
 		log.Fatal(err)
