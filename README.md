@@ -15,8 +15,8 @@ go get github.com/yandex/pandora
 ```
 
 ### Скачать и установить multipart_pandora
-Просто переместите папку multipart_pandora в $GOPATH/src/github.com/yandex/pandora/examples/
-Выполните:
+Просто переместите папку multipart_pandora в $GOPATH/src/github.com/yandex/pandora/examples/ и выполните:
+
 ```bash
 cd $GOPATH/src/github.com/yandex/pandora/examples/multipart_pandora
 go get .
