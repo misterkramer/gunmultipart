@@ -1,0 +1,28 @@
+pools:
+- gun:
+    type: multipart_gun
+    target: example:8080
+
+  ammo:
+    type: multipart_provider
+    source: # You may just write file path here. Or stdin.
+      type: inline
+      data: |
+        {"url": "http://example:8080/example/api/start", "path": "/"}
+#        {"url": "url2", "path": "path2"}
+
+  result:
+    type: json
+    sink: stdout # Just for interactivity print result to stdout. Usually file used here.
+
+  rps:
+    duration: 10s
+    type: const
+    ops: 100
+    
+  startup:
+    type: once
+    times: 5
+
+log:
+  level: debug
